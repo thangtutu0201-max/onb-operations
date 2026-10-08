@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "AuthorizedUser": {
+      "title": "Authorized User",
+      "description": "User authorized to access ONB system",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "User Google email"
+        },
+        "role": {
+          "type": "string",
+          "description": "Role: admin or user"
+        },
+        "status": {
+          "type": "string",
+          "description": "ACTIVE or LOCKED"
+        }
+      },
+      "required": ["email", "role", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "AuthorizedUser",
+      "description": "User profile metadata"
+    }
+  }
+}

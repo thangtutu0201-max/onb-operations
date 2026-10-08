@@ -1,0 +1,8 @@
+{
+  "name": "Hệ thống Quản lý Vận hành ONB..",
+  "description": "Ứng dụng quản trị vận hành nội bộ phòng ONB: Lịch làm việc, Tiến độ chi tiết, Khách hàng \u0026 Gói tiếp nhận, Bảng điểm \u0026 Khoản thưởng, Phân bổ đào tạo tập trung và Phân hệ Core.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

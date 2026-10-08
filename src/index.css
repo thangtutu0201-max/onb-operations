@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    background-color: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0F172A;
+    font-weight: 600;
+  }
+
+  /* Default table styles */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th {
+    background-color: #F1F5F9;
+    color: #475569;
+    font-weight: 600;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  td {
+    color: #334155;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  /* Universal input focus consistency */
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px #E0E7FF;
+  }
+}
+
+/* Custom Card & Container Utility (12px rounded, subtle shadow, clean border) */
+.app-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* Standardized Buttons (Height 40px, rounded 8px, transition 150ms) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 8px;
+  transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: #4338CA;
+}
+.btn-primary:active:not(:disabled) {
+  background-color: #3730A3;
+}
+.btn-primary:disabled {
+  background-color: #F1F5F9;
+  color: #94A3B8;
+  border-color: #E2E8F0;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #334155;
+  font-weight: 500;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out, color 150ms ease-in-out;
+  cursor: pointer;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #F8FAFC;
+}
+.btn-secondary:active:not(:disabled) {
+  background-color: #F1F5F9;
+}
+.btn-secondary:disabled {
+  background-color: #F1F5F9;
+  color: #94A3B8;
+  border-color: #E2E8F0;
+  cursor: not-allowed;
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #DC2626;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 8px;
+  transition: background-color 150ms ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-danger:hover:not(:disabled) {
+  background-color: #B91C1C;
+}
+.btn-danger:active:not(:disabled) {
+  background-color: #991B1B;
+}
+
+/* Compact Buttons (for tables & toolbars) */
+.btn-compact {
+  height: 2.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.75rem;
+}
+
+/* Inputs and Selects */
+.app-input {
+  background-color: #FFFFFF;
+  color: #334155;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  height: 2.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  transition: border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+.app-input:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px #E0E7FF;
+}
+
+/* Standardized Status Badges */
+.status-badge-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #047857;
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: 8px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #92400E;
+  background-color: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 8px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge-danger,
+.status-badge-error {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #B91C1C;
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #1D4ED8;
+  background-color: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 8px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-badge-neutral {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #475569;
+  background-color: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Modals & Dialogs standard container */
+.app-dialog {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04), 0 20px 25px -5px rgba(15, 23, 42, 0.08);
+}
+
+/* Tabular & Monospace numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
